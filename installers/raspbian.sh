@@ -41,7 +41,6 @@ function _main() {
     repo_common="$repo"
     _parse_params "$@"
     _setup_colors
-    _log_output
     _load_installer
 }
 
