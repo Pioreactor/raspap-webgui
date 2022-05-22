@@ -43,8 +43,8 @@ function _install_raspap() {
     _update_system_packages
     _install_dependencies
     _enable_php_lighttpd
-    _check_for_old_configs
     _create_raspap_directories
+    _check_for_old_configs
     _optimize_php
     _download_latest_files
     _change_file_ownership
