@@ -7,7 +7,7 @@
 # get the values of a RaspAP config variable
 # call: _getRaspapConfig RASPAP_MOBILEDATA_CONFIG
 
-raspap_webroot="/var/www/html"
+raspap_webroot="/var/www/raspap"
 
 function _getWebRoot() {
     local path

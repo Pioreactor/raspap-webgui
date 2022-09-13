@@ -28,7 +28,7 @@ readonly raspap_network="$raspap_dir/networking/"
 readonly raspap_router="/etc/lighttpd/conf-available/50-raspap-router.conf"
 readonly rulesv4="/etc/iptables/rules.v4"
 readonly notracking_url="https://raw.githubusercontent.com/notracking/hosts-blocklists/master/"
-webroot_dir="/var/www/html"
+webroot_dir="/var/www/raspap"
 
 if [ "$insiders" == 1 ]; then
     repo="RaspAP/raspap-insiders"
@@ -97,7 +97,7 @@ function _config_installation() {
     if [ "$assume_yes" == 0 ]; then
         read answer < /dev/tty
         if [ "$answer" != "${answer#[Nn]}" ]; then
-            read -e -p < /dev/tty "Enter alternate lighttpd directory: " -i "/var/www/html" webroot_dir
+            read -e -p < /dev/tty "Enter alternate lighttpd directory: " -i "/var/www/raspap" webroot_dir
         fi
     else
         echo -e

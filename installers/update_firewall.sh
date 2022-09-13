@@ -8,7 +8,7 @@ echo -n "Update firewall ... "
 
 cat << EOF > /tmp/updateFirewall.php
 <?php
-//set_include_path('/var/www/html/');
+//set_include_path('/var/www/rasap/');
 \$_SESSION['locale']="en_GB.UTF-8";
 
 require_once 'includes/config.php';

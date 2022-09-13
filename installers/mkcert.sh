@@ -18,7 +18,7 @@ set -o errtrace
 certname=$HOSTNAME."local"
 lighttpd_ssl="/etc/lighttpd/ssl"
 lighttpd_conf="/etc/lighttpd/lighttpd.conf"
-webroot_dir="/var/www/html"
+webroot_dir="/var/www/raspap"
 readonly mkcert_version="1.4.1"
 readonly git_source_url="https://github.com/FiloSottile/mkcert/releases/download/v${mkcert_version}"
 

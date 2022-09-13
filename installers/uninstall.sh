@@ -24,7 +24,7 @@ readonly raspap_sysctl="/etc/sysctl.d/90_raspap.conf"
 readonly raspap_adblock="/etc/dnsmasq.d/090_adblock.conf"
 readonly raspap_network="/etc/systemd/network/"
 readonly rulesv4="/etc/iptables/rules.v4"
-webroot_dir="/var/www/html"
+webroot_dir="/var/www/rasap"
 
 # Determines host Linux distrubtion details
 function _get_linux_distro() {
@@ -79,7 +79,7 @@ function _config_uninstallation() {
     echo -n "Lighttpd install directory: ${webroot_dir}? [Y/n]: "
     read answer
     if [ "$answer" != "${answer#[Nn]}" ]; then
-        read -e -p "Enter alternate lighttpd directory: " -i "/var/www/html" webroot_dir
+        read -e -p "Enter alternate lighttpd directory: " -i "/var/www/raspap" webroot_dir
     fi
     echo "Uninstall from lighttpd directory: ${webroot_dir}"
     echo -n "Uninstall RaspAP with these values? [Y/n]: "
